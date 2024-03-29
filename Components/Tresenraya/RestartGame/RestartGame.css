@@ -1,0 +1,39 @@
+.div-restart {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+    height: 60%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    gap: 50px;
+    background-color: black;
+    opacity: 100%;
+}
+
+.div-restart p {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    user-select: none;
+}
+
+
+#restartButton {
+    width: 50%;
+    height: 15%;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: black;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: white;
+    font-weight: 800;
+}
