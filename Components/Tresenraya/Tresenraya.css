@@ -4,9 +4,9 @@
     grid-template-rows: repeat(3, 1fr);
     min-width: 400px;
     width: 30%;
-    height: 60%;
+    height: 68%;
     background-color: white;
-    margin: 80px auto;
+    margin: 30px auto;
 }
 
 .grid-item {
@@ -35,7 +35,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+    margin: 20px 0;
 }
 
 .div-players {
@@ -59,14 +59,13 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    opacity: 1; /* Inicialmente visible */
-    transition: opacity 0.5s ease-out; /* Transición suave de 0.5 segundos */
+    opacity: 1; 
+    transition: opacity 0.5s ease-out; 
 }
 
 .oculto {
-    opacity: 0; /* Hacer el elemento transparente */
-    pointer-events: none; /* Deshabilitar interacciones de ratón */
-    /* Puedes agregar otras propiedades aquí como height o width si necesitas */
+    opacity: 0; 
+    pointer-events: none; 
   }
 
 .div-Selector div {
@@ -98,7 +97,7 @@
     font-weight: 700;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
     .p-indication {
         font-size: 15px;
         width: 100%;
@@ -122,10 +121,8 @@
     }
 
     .div-game{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        min-width: 95%;
+        min-width: 400px;
+        /* width: 95%; */
         height: 50%;
     }
 

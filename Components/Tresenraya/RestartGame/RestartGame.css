@@ -5,15 +5,17 @@
     text-align: center;
     align-items: center;
     width: 30%;
+    min-width: 400px;
     height: 60%;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
-    gap: 50px;
+    gap: 70px;
     background-color: black;
     opacity: 100%;
+    padding-top: 80px;
 }
 
 .div-restart p {
@@ -29,11 +31,46 @@
     height: 15%;
     border-radius: 10px;
     cursor: pointer;
-    background-color: black;
+    background-color: var(--color5);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
     color: white;
     font-weight: 800;
+    transition: transform  0.5s;
+    -webkit-transition: transform  0.5s;
+    -moz-transition: transform  0.5s;
+    -ms-transition: transform  0.5s;
+    -o-transition: transform  0.5s;
 }
+
+#restartButton:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+    .div-restart {
+        height: 50%;
+    }
+    #restartButton {
+        height: 20%;
+    }
+}
+
+/* @media screen and (max-width: 750px) {
+    .div-restart {
+        width: 95%;
+        height: 50%;
+    }
+    #restartButton {
+        height: 20%;
+    }
+} */

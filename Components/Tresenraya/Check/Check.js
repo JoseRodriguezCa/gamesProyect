@@ -50,8 +50,6 @@ export const checkResult = (tablero, marcadas, gameOver) => {
         }
     }
     if (!winner && marcadas === 9) {
-        console.log('Empate.');
-        alert('¡Empate!');
         return true;
     } else {
         return gameOver;

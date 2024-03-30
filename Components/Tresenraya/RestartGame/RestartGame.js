@@ -1,9 +1,11 @@
+import { checkWinner } from "../Check/Check";
 import { handleSelector, setJugador, setLet } from "../Events/Events";
+import { createFireworks } from "../FireWorks/FireWorks";
 import "./RestartGame.css"
 
 export const restartGame = (gameOver,tablero, marcadas,jugador) => {
     gameOver = false;
-    setJugador("null")
+    setJugador(undefined)
     setLet([], 0, )
     tablero.length = 0;
     marcadas = 0;
@@ -19,34 +21,43 @@ export const restartGame = (gameOver,tablero, marcadas,jugador) => {
 };
 
 
-export const renderGameOverButton = (gameOver,tablero, marcadas,jugador,players) => {
+export const renderGameOverButton = (gameOver, tablero, marcadas, jugador, players) => {
     if (gameOver) {
         if (!document.querySelector('.div-restart')) {
-            const divGame = document.querySelector('.div-game')
-            const divRestart = document.createElement('div')
-            const pRestart = document.createElement('p')
-            divRestart.className = 'div-restart'
-            for (const player of players) {
-                pRestart.innerText = `El jugador ${player.name} ha ganado.`
+            const divGame = document.querySelector('.div-game');
+            const divRestart = document.createElement('div');
+            const pRestart = document.createElement('p');
+            divRestart.className = 'div-restart';
+            if (checkWinner(tablero)) {
+                pRestart.innerText = `El jugador ${checkWinner(tablero)} ha ganado.`;
+                createFireworks()
+            } else {
+                pRestart.innerText = `¡Tenemos un Empate!`
             }
             const restartButton = document.createElement('button');
             restartButton.id = 'restartButton';
             restartButton.textContent = 'Reiniciar Partida';
-            restartButton.addEventListener('click',(e) => restartGame(gameOver,tablero, marcadas,jugador));
-            divRestart.append(pRestart,restartButton)
+            restartButton.addEventListener('click', (e) => restartGame(gameOver, tablero, marcadas, jugador));
+            divRestart.append(pRestart, restartButton);
             divGame.appendChild(divRestart);
         }
     } else {
         const existingRestartButton = document.querySelector('.div-restart');
+        const existingfireworlds = document.querySelector('.fireworks-container')
         if (existingRestartButton) {
             existingRestartButton.classList.add('oculto');
+            if(existingfireworlds){existingfireworlds.classList.add('oculto')}
             setTimeout(() => {
-                existingRestartButton.remove()
+                if(existingfireworlds){ existingfireworlds.remove()}
+                existingRestartButton.remove();
             }, 500);
-
         }
     }
 };
+
+
+
+
 
 
 export const changeScore = (players) => {

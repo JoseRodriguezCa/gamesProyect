@@ -4,10 +4,10 @@ import './Tresenraya.css'
 
 
 
-const divApp = document.querySelector('#app')
 
 export const tresEnRaya = (players) => {
-
+    const divApp = document.querySelector('#app')
+    divApp.innerHTML = ""
     const divContainer = document.createElement('div');
     const divGame = document.createElement('div');
     const divSelector = document.createElement('div');
@@ -47,7 +47,6 @@ export const tresEnRaya = (players) => {
     divApp.append(divContainer,divGame)
     selectPlayer()
     handleSelector()
-    
 };
 
 
