@@ -52,12 +52,6 @@
     color: var(--color5);
 }
 
-
-.li-header a:active {
-    background-color: transparent;
-    outline: none;
-}
-
 .div-logo {
     width: 9%;
     height: 100%;
