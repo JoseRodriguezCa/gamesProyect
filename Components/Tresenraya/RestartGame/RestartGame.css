@@ -58,8 +58,8 @@
 
 @media screen and (max-width: 650px) {
     .div-restart {
-        height: 50%;
-    }
+        height: 52%;
+}
     #restartButton {
         height: 20%;
     }
