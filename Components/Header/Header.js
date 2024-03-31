@@ -7,7 +7,7 @@ import './Header.css'
 
 const headerEnlaces = [
     {
-        name: 'Tres en rayas',
+        name: 'Tres en raya',
         href: ()=> tresEnRaya(players)
     },
     {
@@ -15,8 +15,8 @@ const headerEnlaces = [
         href: ()=> MemoTest()
     },
     {
-        name: 'Piedra,Papel y Tijera',
-        href: ""
+        name: 'Piedra,Papel o Tijera',
+        href: ()=> tresEnRaya(players)
     }
 ]
 
