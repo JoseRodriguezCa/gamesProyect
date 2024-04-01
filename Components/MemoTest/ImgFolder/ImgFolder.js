@@ -4,7 +4,7 @@ import "./ImgFolder.css"
 export const imgFolder = [
     {
         id:1,
-        img:"https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711884053/CHOPPER_q3usot.png"
+        img:"https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711884053/memotest/CHOPPER_q3usot.png"
     },
     {
         id:2,

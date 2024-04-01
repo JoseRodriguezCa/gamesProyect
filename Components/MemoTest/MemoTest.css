@@ -14,7 +14,6 @@
     height: 100%;
     cursor: pointer;
     gap: 20px;
-    aspect-ratio: 1;
     background-color: transparent;
     perspective: 1000px;
 
@@ -32,11 +31,11 @@
     -moz-transition: transform 0.6s;
     -ms-transition: transform 0.6s;
     -o-transition: transform 0.6s;
+    background-color: white;
 }
 
 .front-card,
 .back-card {
-    position: absolute;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -46,10 +45,6 @@
     -moz-transition: transform 0.5s;
     -ms-transition: transform 0.5s;
     -o-transition: transform 0.5s;
-}
-
-.front-card {
-    background-color: white;
 }
 
 .back-card {
@@ -73,4 +68,19 @@
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+}
+
+.grid-item-memo.selected-card .card{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
+
+
+@media (max-width: 450px) {
+    .div-game-memo {
+        min-width: 350px;
+    }
 }

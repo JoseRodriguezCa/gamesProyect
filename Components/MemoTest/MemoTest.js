@@ -24,7 +24,7 @@ export const MemoTest = () => {
         card.className = "card"
         imgCard.src = img.img;
         imgCard.dataset.id = img.id;
-        card.addEventListener('click', (e) => selectCard(e,imgCard));
+        gridItem.addEventListener('click', (e) => selectCard(e,gridItem,img.id));
         backCard.append(imgCard)
         card.append(frontCard,backCard);
         gridItem.append(card)
@@ -34,9 +34,10 @@ export const MemoTest = () => {
 }
 
 
-function shuffleArray(array) {
+const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
 }
+
