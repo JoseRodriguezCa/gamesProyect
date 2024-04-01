@@ -1,3 +1,5 @@
+import './selectCard.css'
+
 let flippedCards = [];
 let processingClick = false;
 
@@ -13,7 +15,11 @@ export const selectCard = (e, gridItem,idimgCard) => {
   flippedCards.push(id)
 
   if (flippedCards.length === 2) {
-    checked()
+    if(winner() === true)
+    {
+      processingClick = true;
+    }
+    
     setTimeout(() => {
       const gridItems = document.querySelectorAll(".grid-item-memo");
       gridItems.forEach((item) => {
@@ -49,15 +55,18 @@ export const checked = () => {
 }
 
 export const winner = () => {
-  if(checked()){
+  if(checked() === true){
     console.log(checked())
-      const divGame = document.querySelector('div-game-memo')
+    console.log("gane");
+      const divGame = document.querySelector('.div-game-memo')
       const divWinner = document.createElement('div')
       const pWinner = document.createElement('p')
       const btnWinner = document.createElement('button')
+      btnWinner.innerText = '¡Jugar de nuevo!';
       divWinner.className = 'div-winner'
       pWinner.innerText = 'Ganaste Wachon'
       divWinner.append(pWinner,btnWinner)
       divGame.append(divWinner)
   }
+  return true;
 }

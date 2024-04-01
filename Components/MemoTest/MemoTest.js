@@ -1,6 +1,6 @@
 import { imgFolder } from './ImgFolder/ImgFolder'
 import './MemoTest.css'
-import { selectCard } from './selectCard/selectCard';
+import {  selectCard, winner } from './selectCard/selectCard';
 
 
 

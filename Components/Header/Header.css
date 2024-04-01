@@ -11,8 +11,8 @@
     text-align: center;
     align-items: center;
     padding-top: 20px;
-    background-color: #2c3e50; /* Color de fondo del encabezado */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra suave */
+    background-color: #2c3e50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     border-bottom: 3px solid black;
 }
 
@@ -39,17 +39,14 @@
     
 }
 
-
-/* Estilos para los enlaces */
 .li-header a {
-    color: #ccc; /* Color del texto para los botones (gris claro) */
-    text-decoration: none; /* Sin subrayado */
-    font-weight: bold; /* Texto en negrita */
-    transition: color 0.3s; /* Transición suave del color del texto */
-    position: relative; /* Para posicionar el pseudo-elemento ::after */
+    color: #ccc; 
+    text-decoration: none;
+    font-weight: bold; 
+    transition: color 0.3s; 
+    position: relative; 
 }
 
-/* Estilos para el efecto de botón */
 .li-header a::after {
     content: '';
     position: absolute;
@@ -57,25 +54,22 @@
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: #ccc; /* Color del efecto de botón (gris claro) */
-    transform: scaleX(0); /* Escalar el ancho a 0 para que no sea visible inicialmente */
-    transform-origin: bottom right; /* Origen de la transformación */
-    transition: transform 0.3s ease-out; /* Transición suave de la transformación */
+    background-color: #ccc; 
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out; 
 }
 
-/* Estilos para el efecto de botón al pasar el cursor */
 .li-header a:hover::after,
-.li-header a:focus::after { /* Añadimos la regla para el estado :focus */
-    transform: scaleX(1); /* Escalar el ancho a 1 para mostrar el efecto */
-    transform-origin: bottom left; /* Origen de la transformación */
+.li-header a:focus::after { 
+    transform: scaleX(1); 
+    transform-origin: bottom left; 
 }
 
 .div-logo img {
     width: 50px;
     margin-left: 30px;
 }
-
-
 
 @media screen and (max-width: 650px) {
 
@@ -87,6 +81,5 @@
         width: 40px;
         margin-left: 10px;
     }
-
 
 }
