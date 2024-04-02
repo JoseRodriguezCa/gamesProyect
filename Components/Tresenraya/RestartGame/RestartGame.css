@@ -4,7 +4,7 @@
     flex-direction: column;
     text-align: center;
     align-items: center;
-    width: 30%;
+    width: 31%;
     min-width: 400px;
     height: 60%;
     transition: all 0.5s;
@@ -16,6 +16,23 @@
     background-color: black;
     opacity: 100%;
     padding-top: 80px;
+    margin-left: -8px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    animation: changeOpacity 0.5s forwards;
+    -webkit-animation: changeOpacity 0.5s forwards;
+}
+
+@keyframes changeOpacity {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
 }
 
 .div-restart p {

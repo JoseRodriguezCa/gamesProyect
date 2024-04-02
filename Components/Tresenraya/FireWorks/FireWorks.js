@@ -3,7 +3,8 @@ import './FireWorks.css'
 export const createFireworks = () => {
     const fireworksContainer = document.createElement('div');
     fireworksContainer.className = 'fireworks-container';
-    document.body.appendChild(fireworksContainer);
+    const divGame = document.querySelector('.div-game');
+    divGame.appendChild(fireworksContainer);
     for (let i = 0; i < 50; i++) {
         const firework = document.createElement('img');
         firework.className = 'firework';

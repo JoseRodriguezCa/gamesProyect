@@ -1,6 +1,6 @@
 import { imgFolder } from './ImgFolder/ImgFolder'
 import './MemoTest.css'
-import {  selectCard, winner } from './selectCard/selectCard';
+import {  selectCard } from './selectCard/selectCard';
 
 
 
@@ -24,7 +24,7 @@ export const MemoTest = () => {
         card.className = "card"
         imgCard.src = img.img;
         imgCard.dataset.id = img.id;
-        gridItem.addEventListener('click', (e) => selectCard(e,gridItem,img.id));
+        gridItem.addEventListener('click', (e) => selectCard(e, gridItem, img.id));
         backCard.append(imgCard)
         card.append(frontCard,backCard);
         gridItem.append(card)
