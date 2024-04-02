@@ -1,3 +1,4 @@
+import { gameRestart } from './GameRestart/GameRestart';
 import { imgFolder } from './ImgFolder/ImgFolder'
 import './MemoTest.css'
 import {  selectCard } from './selectCard/selectCard';
@@ -31,10 +32,11 @@ export const MemoTest = () => {
         divGame.append(gridItem);
     });
     bodyApp.append(divGame);
+    gameRestart(imgFolderDuplicated)
 }
 
 
-const shuffleArray = (array) => {
+export const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
