@@ -7,9 +7,10 @@
   font-weight: 400;
   font-style: normal;
 
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   color:var(--color5);
-  background-color: var(--color3);
+  /* background-color: var(--color3); */
+  background: linear-gradient(var(--color3), var(--color1));
 
   --color1: #9cddc8;
   --color2: #bfd8ad;
@@ -31,10 +32,13 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+body {
+  height: 100svh;
+}
 
 #app {
   width: 100%;
-  height: 84svh;
+  height: 88svh;
   display: flex;
   flex-direction: column;
   text-align: center;
