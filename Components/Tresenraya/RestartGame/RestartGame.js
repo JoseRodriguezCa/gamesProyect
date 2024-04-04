@@ -15,6 +15,7 @@ export const restartGame = (gameOver,tablero, marcadas,jugador) => {
     cells.forEach(cell => {
         cell.querySelector('img').src = '';
         cell.classList.remove('selected');
+        cell.style.pointerEvents = "auto";
     });
     renderGameOverButton(false);
     handleSelector(gameOver)
@@ -24,11 +25,14 @@ export const restartGame = (gameOver,tablero, marcadas,jugador) => {
 export const renderGameOverButton = (gameOver, tablero, marcadas, jugador, players) => {
     if (gameOver) {
         if (!document.querySelector('.div-restart')) {
-            const divGame = document.querySelector('.div-game');
+            const divGame = document.querySelector('.div-count');
             const divRestart = document.createElement('div');
             const pRestart = document.createElement('p');
             divRestart.className = 'div-restart';
             if (checkWinner(tablero)) {
+                document.querySelectorAll('.grid-item').forEach(item => {
+                    item.style.pointerEvents = "none";
+                });
                 pRestart.innerText = `El jugador ${checkWinner(tablero)} ha ganado.`;
                 createFireworks()
             } else {
