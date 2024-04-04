@@ -82,3 +82,17 @@
     }
 
 }
+
+
+@media screen and (max-width: 450px) {
+
+    .ul-container li {
+        font-size: 14px;
+    }
+
+    .div-logo img {
+        width: 30px;
+        margin-left: 10px;
+    }
+
+}
