@@ -15,7 +15,7 @@ const headerEnlaces = [
         href: ()=> MemoTest()
     },
     {
-        name: 'Piedra,Papel o Tijera',
+        name: 'Piedra Papel o Tijera',
         href: ()=> tresEnRaya(players)
     }
 ]

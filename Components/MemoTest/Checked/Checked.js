@@ -1,17 +1,15 @@
 import { gameRestart } from "../GameRestart/GameRestart";
+import { sumScore } from "../MemoTest";
 import "./Checked.css";
 
 export const checked = (flippedCards) => {
   const id1 = flippedCards[0];
   const id2 = flippedCards[1];
-
-  console.log(id1);
-  console.log(id2);
-  console.log("Dos cartas volteadas");
   if (id1 === id2) {
     document.querySelectorAll(`[data-id="${id1}"]`).forEach((item) => {
         item.closest(".grid-item-memo").classList.add("selected-card");
     });
+    sumScore()
   }
   const gridItems = document.querySelectorAll(".grid-item-memo");
   let allSelected = true;

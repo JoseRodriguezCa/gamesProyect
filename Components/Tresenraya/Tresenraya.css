@@ -3,10 +3,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     min-width: 400px;
-    width: 30%;
-    height: 68%;
+    width: 35%;
+    height: 70%;
     background-color: white;
-    margin: 30px auto;
+    margin: auto;
 }
 
 .grid-item {
@@ -34,7 +34,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin: 20px 0;
 }
 
 .div-players {

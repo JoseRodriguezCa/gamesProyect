@@ -1,10 +1,6 @@
 import { handleSelector, setJugador } from './Events/Events';
 import './Tresenraya.css'
 
-
-
-
-
 export const tresEnRaya = (players) => {
     const divApp = document.querySelector('#app')
     divApp.innerHTML = ""

@@ -2,17 +2,33 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    min-width: 400px;
-    width: 60%;
-    height: 90%;
-    margin: 30px auto;
+    margin: 10px auto;
     gap: 10px;
+}
+
+.scores {
+    margin-top: 20px;
+    font-size: 40px;
 }
 
 
 
 @media (max-width: 450px) {
     .div-game-memo {
-        min-width: 350px;
+        height: 0;
     }
+}
+
+
+@media (max-width: 900px) {
+    .div-game-memo {
+        height: 0;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 550px){
+.div-game-memo {
+    margin-top: 100px;
+}
 }
