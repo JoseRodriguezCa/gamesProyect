@@ -1,12 +1,13 @@
 .div-winner {
     background-color: var(--color2);
-    position: absolute;
+    position: fixed;
     width: 30%;
     height: 40%;
     display: flex;
     flex-direction: column;
-    top: 240px;
-    left: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
     text-align: center;
     gap: 40px;
     align-items: center;
@@ -18,6 +19,7 @@
     animation: changeOpacity 0.5s forwards;
     -webkit-animation: changeOpacity 0.5s forwards;
 }
+
 
 
 @keyframes changeOpacity {
@@ -59,4 +61,19 @@
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
+}
+
+
+
+@media (max-width: 450px) {
+    .div-winner {
+        min-width: 350px;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .div-winner {
+        min-width: 350px;
+    }
 }

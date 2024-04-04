@@ -18,7 +18,6 @@ export const checked = (flippedCards) => {
   for (const item of gridItems) {
     if (item.classList.contains("selected-card")) {
       item.style.pointerEvents = "none";
-      console.log("hola");
     } else {
       allSelected = false;
     }
@@ -26,7 +25,7 @@ export const checked = (flippedCards) => {
   return allSelected;
 };
 
-export const winner = (flippedCards) => {
+export const winner = (flippedCards,imgFolderDuplicated) => {
   if (checked(flippedCards) === true) {
     const divGame = document.querySelector(".div-game-memo");
     const divWinner = document.createElement("div");
@@ -34,10 +33,10 @@ export const winner = (flippedCards) => {
     const btnWinner = document.createElement("button");
     btnWinner.innerText = "¡Jugar de nuevo!";
     divWinner.className = "div-winner";
-    pWinner.innerText = "Ganaste Wachon";
+    pWinner.innerText = "¡Has Ganado!";
     divWinner.append(pWinner, btnWinner);
     divGame.append(divWinner);
-    gameRestart()
+    gameRestart(imgFolderDuplicated)
   }
   return true;
 };

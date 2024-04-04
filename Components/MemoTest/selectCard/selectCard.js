@@ -4,7 +4,7 @@ import './selectCard.css'
 export let flippedCards = [];
 let processingClick = false;
 
-export const selectCard = (e, gridItem,idimgCard) => {
+export const selectCard = (e, gridItem,idimgCard,imgFolderDuplicated) => {
     const id = idimgCard
 
   if (processingClick || gridItem.classList.contains("flipped")) {
@@ -16,7 +16,7 @@ export const selectCard = (e, gridItem,idimgCard) => {
   flippedCards.push(id)
 
   if (flippedCards.length === 2) {
-    if(winner(flippedCards) === true)
+    if(winner(flippedCards,imgFolderDuplicated) === true)
     {
       processingClick = true;
     }
@@ -28,7 +28,7 @@ export const selectCard = (e, gridItem,idimgCard) => {
       });
       flippedCards = [];
       processingClick = false;
-    }, 1000);
+    }, 700);
   } else {
     processingClick = false;
   }

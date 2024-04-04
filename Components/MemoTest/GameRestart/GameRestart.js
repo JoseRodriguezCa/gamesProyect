@@ -1,4 +1,5 @@
-import { shuffleArray } from "../MemoTest"
+import { CreateCards } from "../CreateCard/CreateCard";
+
 
 export const gameRestart = (imgFolderDuplicated) => {
     const restartBtn = document.querySelector('.div-winner button')
@@ -11,6 +12,7 @@ export const gameRestart = (imgFolderDuplicated) => {
 
 
 const Restart = (imgFolderDuplicated) => {
+
     const divWinner = document.querySelector('.div-winner')
     const gridItems = document.querySelectorAll(".grid-item-memo");
     for (const item of gridItems) {
@@ -20,6 +22,8 @@ const Restart = (imgFolderDuplicated) => {
     if(divWinner){
     divWinner.remove()
     }
-    console.log("esto pasa?");
-    shuffleArray(imgFolderDuplicated)
+    setTimeout(() => {
+        CreateCards(imgFolderDuplicated)
+    }, 350);
+
 }
