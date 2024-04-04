@@ -32,3 +32,9 @@
     margin-top: 100px;
 }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .div-game-memo {
+        margin-top: 100px;
+    }
+}

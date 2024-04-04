@@ -102,3 +102,10 @@
         height: 70px;
     }
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+    .grid-item-memo {
+        width: 70px;
+        height: 70px;
+    }
+}
