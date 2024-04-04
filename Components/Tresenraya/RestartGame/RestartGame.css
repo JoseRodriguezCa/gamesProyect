@@ -14,24 +14,14 @@
     -o-transition: all 0.5s;
     gap: 30px;
     background-color: rgba(0, 0, 0, 0.753);
-    opacity: 100%;
+    opacity: 1;
     padding-top: 50px;
-    animation: changeOpacity 0.5s forwards;
-    -webkit-animation: changeOpacity 0.5s forwards;
+    transition: opacity 0.5s ease-out;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
-
-@keyframes changeOpacity {
-0% {
-    opacity: 0;
-}
-100% {
-    opacity: 1;
-}
 }
 
 .div-restart p {
@@ -68,11 +58,6 @@
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
 }
-
-
-
-
-
 
 
 @media screen and (max-width: 650px) {

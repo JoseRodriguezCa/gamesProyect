@@ -1,16 +1,16 @@
 import { checkWinner } from "../Check/Check";
 import { handleSelector, setJugador, setLet } from "../Events/Events";
 import { createFireworks } from "../FireWorks/FireWorks";
-import "./RestartGame.css"
+import "./RestartGame.css";
 
-export const restartGame = (gameOver,tablero, marcadas,jugador) => {
+export const restartGame = (gameOver, tablero, marcadas, jugador) => {
     gameOver = false;
-    setJugador(undefined)
-    setLet([], 0, )
+    setJugador(undefined);
+    setLet([], 0);
     tablero.length = 0;
     marcadas = 0;
-    const divSelector = document.querySelector('.div-Selector')
-    divSelector.classList.remove("oculto")
+    const divSelector = document.querySelector('.div-Selector');
+    divSelector.classList.remove("oculto");
     const cells = document.querySelectorAll('.grid-item');
     cells.forEach(cell => {
         cell.querySelector('img').src = '';
@@ -18,9 +18,8 @@ export const restartGame = (gameOver,tablero, marcadas,jugador) => {
         cell.style.pointerEvents = "auto";
     });
     renderGameOverButton(false);
-    handleSelector(gameOver)
+    handleSelector(gameOver);
 };
-
 
 export const renderGameOverButton = (gameOver, tablero, marcadas, jugador, players) => {
     if (gameOver) {
@@ -28,15 +27,15 @@ export const renderGameOverButton = (gameOver, tablero, marcadas, jugador, playe
             const divGame = document.querySelector('.div-count');
             const divRestart = document.createElement('div');
             const pRestart = document.createElement('p');
-            divRestart.className = 'div-restart';
+            divRestart.className = 'div-restart oculto';
             if (checkWinner(tablero)) {
                 document.querySelectorAll('.grid-item').forEach(item => {
                     item.style.pointerEvents = "none";
                 });
                 pRestart.innerText = `El jugador ${checkWinner(tablero)} ha ganado.`;
-                createFireworks()
+                createFireworks();
             } else {
-                pRestart.innerText = `¡Tenemos un Empate!`
+                pRestart.innerText = `¡Tenemos un Empate!`;
             }
             const restartButton = document.createElement('button');
             restartButton.id = 'restartButton';
@@ -44,24 +43,27 @@ export const renderGameOverButton = (gameOver, tablero, marcadas, jugador, playe
             restartButton.addEventListener('click', (e) => restartGame(gameOver, tablero, marcadas, jugador));
             divRestart.append(pRestart, restartButton);
             divGame.appendChild(divRestart);
+            setTimeout(() => {
+                divRestart.classList.remove('oculto');
+            }, 100);
         }
     } else {
         const existingRestartButton = document.querySelector('.div-restart');
-        const existingfireworlds = document.querySelector('.fireworks-container')
+        const existingfireworlds = document.querySelector('.fireworks-container');
         if (existingRestartButton) {
             existingRestartButton.classList.add('oculto');
-            if(existingfireworlds){existingfireworlds.classList.add('oculto')}
+            if (existingfireworlds) {
+                existingfireworlds.classList.add('oculto');
+            }
             setTimeout(() => {
-                if(existingfireworlds){ existingfireworlds.remove()}
+                if (existingfireworlds) {
+                    existingfireworlds.remove();
+                }
                 existingRestartButton.remove();
             }, 500);
         }
     }
 };
-
-
-
-
 
 
 export const changeScore = (players) => {
