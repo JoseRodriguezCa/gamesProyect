@@ -1,5 +1,6 @@
 
 import { MemoTest } from '../MemoTest/MemoTest';
+import { PiedraPapeloTijera } from '../PiedraPapeloTijera/PiedraPapeloTijera';
 import { players } from '../Tresenraya/Check/Check';
 import { tresEnRaya } from '../Tresenraya/Tresenraya';
 import './Header.css'
@@ -16,7 +17,7 @@ const headerEnlaces = [
     },
     {
         name: 'Piedra Papel o Tijera',
-        href: ()=> tresEnRaya(players)
+        href: ()=> PiedraPapeloTijera()
     }
 ]
 

@@ -1,0 +1,60 @@
+
+.div-container-3 {
+    display: flex;
+    gap: 300px;
+}
+
+.div-user {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.div-computer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.div-img-user {
+    display: flex;
+    gap: 50px;
+}
+
+.div-img-computer {
+    display: flex;
+    gap: 50px;
+    pointer-events: none;
+}
+
+
+.div-img-user img {
+    width: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+.seleccionado {
+    border-bottom: 1px solid black;
+}
+.div-img-user img:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+
+.div-img-computer img {
+    width: 50px;
+}
