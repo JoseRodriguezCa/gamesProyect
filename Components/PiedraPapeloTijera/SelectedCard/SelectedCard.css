@@ -1,7 +1,69 @@
-.img-selected-user {
-    width: 150px;
+.img-selected-user,
+.img-selected-computer {
+    width: 150px; /* Ancho inicial de las imágenes seleccionadas */
+    height: auto; /* Altura automática */
+    order: 3;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-.img-selected-computer {
-    width: 150px;
+.countdown-container {
+    position: absolute;
+    background-color: transparent;
+    opacity: 1;
+    text-align: center;
+    width: 50px; /* Ancho inicial del contenedor de cuenta regresiva */
+    height: 50px; /* Altura inicial del contenedor de cuenta regresiva */
+    border-radius: 100%; /* Borde redondeado */
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.countdown {
+    font-size: 70px; /* Tamaño inicial de la cuenta regresiva */
+    color: black;
+    animation: countdownAnimation 1s ease-in-out infinite alternate;
+    -webkit-animation: countdownAnimation 2s ease-in-out infinite alternate;
+}
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    .img-selected-user,
+    .img-selected-computer {
+        width: 100px; /* Ancho de las imágenes seleccionadas en dispositivos más pequeños */
+    }
+    
+    .countdown-container {
+        width: 40px; /* Ancho del contenedor de cuenta regresiva en dispositivos más pequeños */
+        height: 40px; /* Altura del contenedor de cuenta regresiva en dispositivos más pequeños */
+    }
+    
+    .countdown {
+        font-size: 60px; /* Tamaño de la cuenta regresiva en dispositivos más pequeños */
+    }
+}
+
+@media screen and (max-width: 649px) {
+    .countdown-container {
+        top: 40%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .img-selected-user,
+    .img-selected-computer {
+        width: 70px; /* Ancho de las imágenes seleccionadas en dispositivos aún más pequeños */
+    }
+    
+    .countdown-container {
+        width: 30px; /* Ancho del contenedor de cuenta regresiva en dispositivos aún más pequeños */
+        height: 30px; /* Altura del contenedor de cuenta regresiva en dispositivos aún más pequeños */
+        top: 40%;
+    }
+    
+    .countdown {
+        font-size: 50px; /* Tamaño de la cuenta regresiva en dispositivos aún más pequeños */
+    }
 }

@@ -1,6 +1,6 @@
-import { checkedWinner } from '../Checked/Checked';
+
 import { rpsData } from '../RpsData/RpsData';
-import { computerUserSelect, selectedCard } from '../SelectedCard/SelectedCard';
+import { countdown } from '../SelectedCard/SelectedCard';
 import './CreateCard.css'
 
 
@@ -10,9 +10,9 @@ export const createCard = (userocomputer) => {
     const imgCard = document.createElement('img')
         imgCard.src = element.img
         userocomputer.append(imgCard)
-        imgCard.addEventListener('click', (e) => computerUserSelect(e, element))
+        imgCard.addEventListener('click', (e) => countdown(e, element))
+        return imgCard
     }); 
-
 }
 
 

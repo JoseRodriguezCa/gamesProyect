@@ -1,17 +1,12 @@
 
 .div-container-3 {
     display: flex;
-    gap: 300px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
 }
 
-.div-user {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    align-items: center;
-}
-
+.div-user,
 .div-computer {
     display: flex;
     flex-direction: column;
@@ -20,41 +15,96 @@
     align-items: center;
 }
 
-.div-img-user {
-    display: flex;
-    gap: 50px;
-}
-
+.div-img-user,
 .div-img-computer {
     display: flex;
-    gap: 50px;
+    gap: 20px;
+    order: 2;
+    transition: all 0.5s forwards;
+}
+.div-img-computer{
     pointer-events: none;
 }
 
-
-.div-img-user img {
-    width: 50px;
+.div-img-user img,
+.div-img-computer img {
+    width: 100px; /* Ancho de las imágenes */
+    height: auto; /* Altura automática */
     cursor: pointer;
     transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    -o-transition: all 0.5s;
 }
 
 .seleccionado {
     border-bottom: 1px solid black;
 }
+
+.opacity-seleccionada {
+    opacity: 1;
+}
+
 .div-img-user img:hover {
     transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
+}
+
+.btn-rst-score {
+    position: absolute;
+    top: 500px;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    transition: all 0.5s ;
+    -webkit-transition: all 0.5s ;
+    -moz-transition: all 0.5s ;
+    -ms-transition: all 0.5s ;
+    -o-transition: all 0.5s ;
+}
+
+.btn-rst-score:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 819px) {
+    .div-container-3 {
+        gap: 50px;
+    }
+    .div-user,
+    .div-computer {
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .div-container-3 {
+        gap: 50px;
+    }
+    .div-img-user img,
+    .div-img-computer img {
+        width: 80px; /* Tamaño de las imágenes en dispositivos más pequeños */
+    }
 }
 
 
 
-.div-img-computer img {
-    width: 50px;
+@media screen and (max-width: 576px) {
+    .div-container-3 {
+        gap: 20px;
+    }
+    .div-img-user img,
+    .div-img-computer img {
+        width: 60px; /* Tamaño de las imágenes en dispositivos aún más pequeños */
+    }
+
+    .btn-rst-score {
+        top: 550px;
+    }
 }
+
+
