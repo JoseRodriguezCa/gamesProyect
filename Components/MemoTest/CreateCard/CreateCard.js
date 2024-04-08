@@ -13,8 +13,12 @@ export const CreateCards = (imgFolderDuplicated) => {
         const backCard = document.createElement('div')
         const imgCard = document.createElement('img');
         gridItem.className = 'grid-item-memo';
+        gridItem.classList.add('flipped')
         frontCard.className = 'front-card'
         backCard.className = 'back-card';
+        setTimeout(() => {
+            gridItem.classList.remove('flipped')
+        }, 500);
         card.className = "card"
         imgCard.src = img.img;
         imgCard.dataset.id = img.id;

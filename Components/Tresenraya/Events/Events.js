@@ -17,6 +17,14 @@ export const setLet = (array,numMarcadas) => {
     marcadas = numMarcadas
 };
 
+export const getTableroYMarcadas = () => {
+    return {
+        tablero: tablero,
+        marcadas: marcadas,
+        gameOver: gameOver
+    };
+};
+
 
 export const handleSelector = (gameOver) => {
     const cells = document.querySelectorAll('.grid-item')

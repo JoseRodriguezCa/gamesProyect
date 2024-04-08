@@ -60,7 +60,7 @@
     .countdown-container {
         width: 30px; /* Ancho del contenedor de cuenta regresiva en dispositivos aún más pequeños */
         height: 30px; /* Altura del contenedor de cuenta regresiva en dispositivos aún más pequeños */
-        top: 40%;
+        top: 35%;
     }
     
     .countdown {

@@ -18,9 +18,9 @@ export const PiedraPapeloTijera = () => {
     divComputer.className = 'div-computer'
     divUser.className = 'div-user'
     BtnRestartScore.className = 'btn-rst-score'
+    BtnRestartScore.id = 'restartButton'
     BtnRestartScore.innerText = '¡Resetear Puntuacion!'
     BtnRestartScore.addEventListener('click',() => {
-        console.log('hola');
         localStorage.clear();
         restartScore()
     } )
@@ -31,7 +31,6 @@ export const PiedraPapeloTijera = () => {
     PrintScore()
     createCard(divImgUser);
     createCard(divImgComputer);
-
 }
 
 

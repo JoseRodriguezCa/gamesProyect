@@ -1,3 +1,4 @@
+import { restart } from '../PiedraPapeloTijera/GameRestart/GameRestart';
 import { CreateCards } from './CreateCard/CreateCard';
 import { imgFolder } from './ImgFolder/ImgFolder'
 import './MemoTest.css'
@@ -6,6 +7,7 @@ let score = 0;
 
 
 export const MemoTest = () => {
+    score = 0;
     const bodyApp = document.querySelector('#app');
     const scores = document.createElement('p')
     const divGame = document.createElement('div');

@@ -3,14 +3,15 @@ import { rpsData } from '../RpsData/RpsData';
 import './SelectedCard.css'
 
 let count = 3;
+let countdownInterval;
 
 export const restCount = () => {
     if(count > 0){
         count--;
-    }
-    const countdown = document.querySelector('.countdown')
+    };
+    const countdown = document.querySelector('.countdown');
     countdown.innerText = count;
-}
+};
 
 export const countdown = (e,element) => {
     const divImgUser = document.querySelector('.div-img-user');
@@ -23,7 +24,10 @@ export const countdown = (e,element) => {
     countdown.className = 'countdown';
     countdown.innerText = 3;
     countdownContainer.append(countdown);
-    const countdownInterval = setInterval(() => {
+    if (countdownInterval) {
+        clearInterval(countdownInterval);
+    }
+        countdownInterval = setInterval(() => {
         restCount();
         if (count == 0) {
             countdownContainer.style.opacity = 0;
@@ -32,7 +36,7 @@ export const countdown = (e,element) => {
                 countdownContainer.remove();
                 count = 3;
             }, 1000);
-            computerUserSelect(e, element)
+            computerUserSelect(e, element);
         }
     }, 700);
 };
@@ -44,18 +48,18 @@ export const computerUserSelect = (e, element) => {
         if(selectedCard(e, element) === true){
                 const divComputer = document.querySelector('.div-computer');
                 const randomIndex = Math.floor(Math.random() * rpsData.length);
-                checkedWinner(element,rpsData[randomIndex] )
+                checkedWinner(element,rpsData[randomIndex]);
                     const computerImage = document.createElement("img");
                     computerImage.className = 'img-selected-computer';
                     computerImage.src = rpsData[randomIndex].img;
                     const divImgComputer = document.querySelectorAll('.div-img-computer img').forEach(element => {
                         if(element.src == rpsData[randomIndex].img){
-                            element.classList.add('seleccionado')
-                        }
+                            element.classList.add('seleccionado');
+                        };
                     });
                     divComputer.append(computerImage);
                     setTimeout(() => {
-                        computerImage.classList.add('opacity-seleccionada') 
+                        computerImage.classList.add('opacity-seleccionada');
                     }, 100);
     }
 }
@@ -69,7 +73,7 @@ export const selectedCard = (e, element) => {
         divUser.append(ImgSelectedUser);
         divImgUser.style.pointerEvents = "none";
         setTimeout(() => {
-            ImgSelectedUser.classList.add('opacity-seleccionada') 
+            ImgSelectedUser.classList.add('opacity-seleccionada');
         }, 100);
     return true;
 }

@@ -34,14 +34,14 @@ export const header = () => {
     logo.src = 'https://res.cloudinary.com/dtgsaqjwa/image/upload/v1711758054/control-del-juego_la4wmx.png'
     for (const enlace of headerEnlaces) {
         const liHeader = document.createElement('li');
-        const aHeader = document.createElement('a')
+        const aHeader = document.createElement('a');
         liHeader.className = 'li-header'
         aHeader.innerText = enlace.name;
         liHeader.append(aHeader)
         ulContainer.append(liHeader);
         aHeader.addEventListener('click', (e) => {
-            e.preventDefault()
-            aHeader.href = enlace.href()
+            e.preventDefault();
+            enlace.href();
         })
     }
     divLogo.append(logo)

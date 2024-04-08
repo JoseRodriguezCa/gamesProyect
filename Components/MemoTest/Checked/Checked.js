@@ -31,6 +31,8 @@ export const winner = (flippedCards,imgFolderDuplicated) => {
     const btnWinner = document.createElement("button");
     btnWinner.innerText = "¡Jugar de nuevo!";
     divWinner.className = "div-winner";
+    divWinner.classList.add('div-restart')
+    btnWinner.id = 'restartButton'
     pWinner.innerText = "¡Has Ganado!";
     divWinner.append(pWinner, btnWinner);
     divGame.append(divWinner);

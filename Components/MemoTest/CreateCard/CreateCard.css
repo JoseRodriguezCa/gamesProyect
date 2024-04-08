@@ -18,7 +18,12 @@
     -moz-transition: transform 0.6s;
     -ms-transition: transform 0.6s;
     -o-transition: transform 0.6s;
-    background-color: var(--color4);
+    background:linear-gradient(#555343, #4ac19b);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 .front-card,
@@ -32,10 +37,18 @@
     -moz-transition: transform 0.5s;
     -ms-transition: transform 0.5s;
     -o-transition: transform 0.5s;
+    border-radius: 10px;
+}
+
+.front-card {
+    background-image: url('https://i.pinimg.com/originals/01/ee/fe/01eefe3662a40757d082404a19bce33b.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .back-card {
-    background-color: white;
+    background:linear-gradient(#555343, #4ac19b);
     transform: rotateY(180deg);
     display: flex;
     justify-content: center;
@@ -43,6 +56,7 @@
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+
 }
 
 .back-card img {

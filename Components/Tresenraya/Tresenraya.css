@@ -29,10 +29,10 @@
     -moz-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -o-transition: all 0.5s;
-}
-
-.grid-item:hover {
-    background-color: var(--color1);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .grid-item img {

@@ -33,19 +33,21 @@ export const restart = () => {
     const imgComputerSelected = document.querySelector('.img-selected-computer')
     imgUser.forEach(element => {
         element.classList.remove('seleccionado')
-        imgUserSelected.classList.remove('opacity-seleccionada') 
-        setTimeout(() => {
+        if(imgUserSelected){
+            imgUserSelected.classList.remove('opacity-seleccionada') 
+            setTimeout(() => {
             imgUserSelected.remove()
-        }, 200);
-
+            }, 200);
+        }
     });
     ImgComputer.forEach(element => {
         element.classList.remove('seleccionado')
-        imgComputerSelected.classList.remove('opacity-seleccionada')
-        setTimeout(() => {
+        if(imgComputerSelected){
+            imgComputerSelected.classList.remove('opacity-seleccionada')
+            setTimeout(() => {
             imgComputerSelected.remove()
-        }, 200);
-
+            }, 200);
+        }
     });
     divImgUser.style.pointerEvents = "auto";
 if(divRestart){

@@ -1,7 +1,9 @@
-import { handleSelector, setJugador } from './Events/Events';
+import { getTableroYMarcadas, handleSelector, setJugador } from './Events/Events';
+import { restartGame } from './RestartGame/RestartGame';
 import './Tresenraya.css'
 
 export const tresEnRaya = (players) => {
+    const { tablero,marcadas,gameOver } = getTableroYMarcadas()
     const divApp = document.querySelector('#app')
     divApp.innerHTML = ""
     const divCount = document.createElement('div');
@@ -46,6 +48,7 @@ export const tresEnRaya = (players) => {
     divApp.append(divCount);
     selectPlayer();
     handleSelector();
+    restartGame(gameOver,tablero,marcadas)
 };
 
 
