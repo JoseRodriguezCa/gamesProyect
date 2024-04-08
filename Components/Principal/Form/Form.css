@@ -1,0 +1,54 @@
+#usernameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .formulario {
+    width: 300px;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .formulario h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  .formulario label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .formulario input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .formulario input::placeholder {
+    text-align: center;
+  }
+  
+  .formulario button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario button:hover {
+    background-color: #0056b3;
+  }
+  
