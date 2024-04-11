@@ -21,7 +21,8 @@ export const PiedraPapeloTijera = () => {
     BtnRestartScore.id = 'restartButton'
     BtnRestartScore.innerText = '¡Resetear Puntuacion!'
     BtnRestartScore.addEventListener('click',() => {
-        localStorage.clear();
+        localStorage.removeItem('user');
+        localStorage.removeItem('ordenador');
         restartScore()
     } )
     divUser.append(divImgUser);
