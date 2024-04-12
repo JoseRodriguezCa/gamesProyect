@@ -1,4 +1,5 @@
 import { header } from '../../Header/Header';
+import { restartScore, setLocaleStorage } from '../../PiedraPapeloTijera/Checked/Checked';
 import { principal } from '../Principal';
 import './Form.css'
 
@@ -54,6 +55,7 @@ export const formInput = () => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
                 localStorage.clear();
+                restartScore()
                 principal();
                 header();
                 const logoUser = document.querySelector('.div-logo img');

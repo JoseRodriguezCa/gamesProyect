@@ -26,7 +26,8 @@ export const checkedWinner = (elementUser, elementComputer) => {
     } 
     else {
         setTimeout(() => {
-            gameRestart("Gana el usuario");
+            let nameUser = getLocaleStorage()
+            gameRestart(`Gana  ${nameUser}`);
             usuario++
             setLocaleStorage(usuario,"user")
             changeScore()
@@ -44,7 +45,6 @@ export const PrintScore = () => {
     const h1Computer = document.createElement('h1');
     h1User.className = 'h1-score-user'
     h1Computer.className = 'h1-score-computer'
-    console.log('dentro de piedra',nameUser);
     h1User.innerText = `${nameUser} = ${usuario}`
     h1Computer.innerText = `Ordenador = ${ordenador}`
     divUser.append(h1User)
@@ -63,10 +63,14 @@ export const restartScore = () => {
     let nameUser = getLocaleStorage()
     usuario = 0;
     ordenador = 0;
-    const h1User = document.querySelector('.h1-score-user')
-    const h1Computer = document.querySelector('.h1-score-computer')
-    h1User.innerText = `${nameUser} = ${usuario}`
-    h1Computer.innerText = `Ordernador = ${ordenador}`
+    const h1User = document.querySelector('.h1-score-user');
+    const h1Computer = document.querySelector('.h1-score-computer');
+    if(h1User){
+        h1User.innerText = `${nameUser} = ${usuario}`;
+    }
+    if(h1Computer){
+        h1Computer.innerText = `Ordernador = ${ordenador}`;
+    }
 }
 
 export const setLocaleStorage = (score,userorcomputer) => {
